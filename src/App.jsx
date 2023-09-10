@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './App.scss';
-
+import Header from '@/laylout/header/Header';
 function App() {
 
   return (
     <>
+      <Header />
       <div className="container">
         <div className="row">
           <div className="col-12">
