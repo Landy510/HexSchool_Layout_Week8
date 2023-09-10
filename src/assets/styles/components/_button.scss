@@ -1,0 +1,13 @@
+.btn {
+  font-size: $h4-font-size;
+  font-family: 'Shrikhand', cursive;
+  @apply text-white bg-black border-[1px] border-white px-[80px] py-[4px] rounded-[40px];
+}
+
+.btn:hover {
+  @apply bg-[white] text-primary-300;
+}
+
+.btn:active {
+  @apply bg-[white] text-[black];
+}
