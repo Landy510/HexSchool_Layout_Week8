@@ -1,10 +1,20 @@
+@import '../../assets/styles/utils/mixins';
+
 .gradient-bg {
   background: linear-gradient(#7000FF, #11002D) center center / 100% 100% no-repeat;
 }
 
 .img-bg {
   background-image: url('../../assets/images/carousel_background.png'), url('../../assets/images/carousel_background_color.png');
-  background-position: left center, center;
-  background-size: contain, cover;
+  background-position: top center, center;
+  background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
+}
+
+
+@include tablet {
+  .img-bg {
+    background-position: left center, center;
+    background-size: contain, cover;
+  }
 }

@@ -135,7 +135,7 @@ const Index = () => {
           </div>
       </div>
 
-      <div className={`${styles['img-bg']} fs-24 text-white font-bold pb-[52px] pt-6 block tablet:hidden`}>
+      <div className={`${styles['img-bg']} fs-24 text-white font-bold pb-[52px] pt-[140px] -mt-[80px] block tablet:hidden`}>
         <div className='px-2-1/2'>
           <div className='bg-gradient-to-r from-primary-500 to-primary-300 h-[40px]'></div>
           <p className='mb-[12px] tracking-[calc(1rem*1.5)]'>什麼是</p>
