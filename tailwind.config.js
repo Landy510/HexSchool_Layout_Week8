@@ -8,6 +8,12 @@ export default {
     './src/**/**/**/**/*.{html,jsx,tsx}',
   ],
   theme: {
+    container: {
+      center: true,
+      screens: {
+        '2xl': '1320px'
+      }
+    },
     spacing: {
       '1': '0.25rem',
       '2': '0.5rem',

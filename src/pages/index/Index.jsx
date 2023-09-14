@@ -7,27 +7,27 @@ const Index = () => {
   return (
     <div>
       <div className={`${styles['gradient-bg']}`}>
-        <div className='container-xxl px-5 pt-11'>
-          <div className="row">
-            <div className="col-3 flex">
+        <div className='px-5 pt-11'>
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-3 flex">
               <p className='pb-2 mt-auto text-white border-[1px] border-solid border-t-0 border-l-0 border-r-0 border-white font-bold'>最新消息！新版本 v15.4 釋出，搶先體驗！</p>
             </div>
-            <div className="col-6">
+            <div className="col-span-6">
               <img 
                 src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/circle.png?raw=true" 
                 alt="" 
                 className='w-[196px] h-[196px] mx-auto'
               />
             </div>
-            <div className="col-3 flex flex-col">
+            <div className="col-span-3 flex flex-col">
               <p className='pt-2 mb-11 text-white border-[1px] border-solid border-b-0 border-l-0 border-r-0 border-white font-bold'>ALPHABOX+ STUDIO</p>
               <p className='text-[#AD93CF] font-medium mt-auto'>Copyright © 2023 Hexschool.</p>
             </div>
           </div>
         </div>
-        <div className="container-xxl px-5 relative bottom-[-100px]">
-          <div className="row">
-            <div className="col-3 flex flex-col">
+        <div className="px-5 relative bottom-[-100px]">
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-3 flex flex-col">
               {/* <p className='py-2 mt-auto mb-11 text-white border-[1px] border-solid border-t-0 border-l-0 border-r-0 border-white font-bold'>最新消息！新版本 v15.4 釋出，搶先體驗！</p> */}
               <img 
                 src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/diane.png?raw=true" 
@@ -35,7 +35,7 @@ const Index = () => {
                 className='mt-auto'
               />
             </div>
-            <div className="col-6">
+            <div className="col-span-6">
               {/* <img 
                 src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/circle.png?raw=true" 
                 alt="" 
@@ -58,7 +58,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="col-3 flex flex-col">
+            <div className="col-span-3 flex flex-col">
               {/* <p className='py-2 mt-auto mb-11 text-white border-[1px] border-solid border-b-0 border-l-0 border-r-0 border-white font-bold'>ALPHABOX+ STUDIO</p>
               <p className='text-[#AD93CF] font-medium mb-11'>Copyright © 2023 Hexschool.</p> */}
               <img 
