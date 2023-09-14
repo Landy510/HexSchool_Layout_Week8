@@ -3,7 +3,10 @@ import { useState } from 'react';
 const Header = () => {
   const [isDropDownShow, setIsDropDownShow] = useState(false)
   return (
-    <header className="bg-primary-300 py-[16px] relative border-[1px] border-l-[0] border-r-[0] border-t-[0] border-white">
+    <header className={[
+      'bg-primary-300 py-[16px] relative border-[1px] border-l-[0] border-r-[0] border-t-[0] border-white',
+      'container-xxl px-5'
+    ].join(' ')}>
       <div className="container-xxl flex items-center justify-between">
         <a 
           href="#"
