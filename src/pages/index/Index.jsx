@@ -172,7 +172,7 @@ const Index = () => {
       {/* --- END  --- */}
 
       <div className={`${styles['news-bg']} pt-[160px] pb-[40px] px-2-1/2`}>
-        <div className='desktop:container desktop:px-2-1/2 text-white font-bold'>
+        <div className='desktop:container desktop:px-2-1/2 text-white font-bold overflow-hidden'>
           <h2 className='tracking-[2.5rem] fs-40 text-center -mr-[40px] tablet:mr-[0] tablet:tracking-[3rem] tablet:fs-48 tablet:text-left mb-8'>最新消息</h2>
           <div className='grid grid-cols-12'>
             <div className="col-span-12 py-8 px-3 border-y border-solid border-white border-l-0 border-r-0">
@@ -253,20 +253,53 @@ const Index = () => {
         </div>
       </div>
 
-      <div className={`${styles['share-section-bg']} relative overflow-hidden text-white pt-[10rem] pb-[2.5rem]`}>
+      <div className={`${styles['share-section-bg']} relative overflow-hidden text-white px-2-1/2 pt-[60px] pb-15 tablet:pt-[10rem] tablet:pb-[2.5rem]`}>
         <div className='desktop:container'>
           <div className='flex items-center font-bold mb-3'>
-            <p className='fs-48 tracking-[3rem]'>使用分享</p>
-            <span className='text-base'>展示其他使用者對於產品的真實體驗與評價，讓您更加放心選擇。</span>  
+            <p className='text-[2.5rem] tracking-[2.5rem] tablet:fs-48 tablet:tracking-[3rem]'>使用分享</p>
+            <span className='text-base hidden tablet:inline-block'>展示其他使用者對於產品的真實體驗與評價，讓您更加放心選擇。</span>  
           </div>
           <p className='font-bold mb-[2.5rem]'>01 — 04</p>
+          <p className='block tablet:hidden mb-5'>展示其他使用者對於產品的真實體驗與評價，讓您更加放心選擇。</p>
           <img 
             src={emergencyImg} 
             alt="" 
             className='w-[60px] h-[60px] mb-5'
           />
-          <Swiper />
-          <p className='mt-[136px]'>若您有任何疑問或建議，歡迎隨時與我們聯絡，我們將竭誠為您解答。</p>
+          <div className='hidden tablet:block'>
+            <Swiper />
+          </div>
+          <div className='block tablet:hidden'>
+            {
+              Array.from({length: 4}).map((val, index) => {
+                return (
+                  <div 
+                    key={index}
+                    className={[
+                    'p-5 font-bold',
+                    `${index % 2 === 0 ? 'bg-primary-100 text-white' : 'bg-white text-black'}`,
+                    `${index < 3 ? 'mb-5': ''}`
+                    ] .join(' ')}
+                  >
+                    <p className='mb-6 flex items-center'>
+                      Zona 
+                      <span className={`w-2 h-2 rounded-full ${index % 2 === 0 ? 'bg-white' : 'bg-black'} mx-2`}></span>
+                      Taipei
+                    </p>
+                    <p className='mb-[10rem]'>
+                      ALPHABOX+ 真的很夯！每次把它打開，感覺就像是身臨其境一樣。它陪我度過了很多寂寞的時光，讓我在家裡也能享受到優質的休閒時光。
+                    </p>
+                    <p>
+                      <span className={`w-3 h-3 rounded-full ${index % 2 === 0 ? 'bg-white' : 'bg-black'} inline-block mr-3`}></span>
+                      <span className={`w-3 h-3 rounded-full ${index % 2 === 0 ? 'bg-white' : 'bg-black'} inline-block mr-3`}></span>
+                      ALPHABOX+ Dianne
+                    </p>
+                  </div>
+                )
+              })
+            }
+          </div>
+          <p className='mt-[136px] hidden tablet:block'>若您有任何疑問或建議，歡迎隨時與我們聯絡，我們將竭誠為您解答。</p>
         </div>
         <img 
           src={ALPHABOXTextImg} 
