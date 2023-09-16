@@ -18,6 +18,13 @@
   background-repeat: no-repeat;
 }
 
+.share-section-bg {
+  background-image: url('../../assets/images/Rectangle23.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @include tablet {
   .img-bg {
     background-position: left center, center;

@@ -6,6 +6,8 @@ import line_end_arrow_notchImg from '@/assets/images/line_end_arrow_notch.png';
 import carousel_mobileImg from '@/assets/images/carousel_mobile.png';
 import emergencyImg from '@/assets/images/emergency.png';
 import seeMoreImg from '@/assets/images/see-more.png';
+import ALPHABOXTextImg from '@/assets/images/ALPHABOX+.png';
+import Swiper from './components/swiper/Swiper';
 
 const Index = () => {
   return (
@@ -249,6 +251,28 @@ const Index = () => {
           </a>
           <p className='text-end hidden tablet:block'>為環保盡一份心力，我們的包裝盒和紙質說明書都使用環保材料</p>
         </div>
+      </div>
+
+      <div className={`${styles['share-section-bg']} relative overflow-hidden text-white pt-[10rem] pb-[2.5rem]`}>
+        <div className='desktop:container'>
+          <div className='flex items-center font-bold mb-3'>
+            <p className='fs-48 tracking-[3rem]'>使用分享</p>
+            <span className='text-base'>展示其他使用者對於產品的真實體驗與評價，讓您更加放心選擇。</span>  
+          </div>
+          <p className='font-bold mb-[2.5rem]'>01 — 04</p>
+          <img 
+            src={emergencyImg} 
+            alt="" 
+            className='w-[60px] h-[60px] mb-5'
+          />
+          <Swiper />
+          <p className='mt-[136px]'>若您有任何疑問或建議，歡迎隨時與我們聯絡，我們將竭誠為您解答。</p>
+        </div>
+        <img 
+          src={ALPHABOXTextImg} 
+          alt="" 
+          className='absolute bottom-[10px] left-[0px] right-[0px]'
+        />
       </div>
     </div>
   )
