@@ -11,6 +11,12 @@
   background-repeat: no-repeat, no-repeat;
 }
 
+.news-bg {
+  background-image: url('../../assets/images/Rectangle18.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 @include tablet {
   .img-bg {
