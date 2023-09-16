@@ -1,0 +1,30 @@
+input {
+  background-color: #fff;
+  font-size: 20px;
+  padding: 8px 16px;
+  color: #000;
+}
+
+textarea {
+  background-color: #fff;
+  font-size: 20px;
+  padding: 8px 16px;
+  color: #000;
+}
+
+input::placeholder,
+textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+  font-weight: 700;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+}

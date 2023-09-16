@@ -6,6 +6,7 @@ import line_end_arrow_notchImg from '@/assets/images/line_end_arrow_notch.png';
 import carousel_mobileImg from '@/assets/images/carousel_mobile.png';
 import emergencyImg from '@/assets/images/emergency.png';
 import seeMoreImg from '@/assets/images/see-more.png';
+import point_scanImg from '@/assets/images/point_scan.png';
 import ALPHABOXTextImg from '@/assets/images/ALPHABOX+.png';
 import Swiper from './components/swiper/Swiper';
 
@@ -253,6 +254,7 @@ const Index = () => {
         </div>
       </div>
 
+      {/* 使用分享 區塊 */}
       <div className={`${styles['share-section-bg']} relative overflow-hidden text-white px-2-1/2 pt-[60px] pb-15 tablet:pt-[10rem] tablet:pb-[2.5rem]`}>
         <div className='desktop:container'>
           <div className='flex items-center font-bold mb-3'>
@@ -306,6 +308,54 @@ const Index = () => {
           alt="" 
           className='absolute bottom-[10px] left-[0px] right-[0px]'
         />
+      </div>
+
+      {/* 聯絡我們 區塊 */}
+      <div className='bg-primary-400 text-white py-[3.75rem] tablet:py-[9rem]'>
+        <div className="desktop:container px-2-1/2">
+          <div className="grid grid-cols-12">
+            <div className="col-span-12 mb-5 tablet:mb-0 tablet:col-span-5">
+              <p className='text-[2.5rem] tracking-[2.5rem] tablet:fs-48 tablet:tracking-[3rem] font-bold mb-6'>聯絡我們</p>
+              <div className='mb-[54px]'>
+                <span className='inline-block mr-2 w-[12px] h-[12px] rounded-full bg-white'></span>
+                <span className='inline-block w-[124px] h-[12px] rounded-full bg-white'></span>
+              </div>
+              <p className='mb-1'>讓科技成為您的最佳夥伴</p>
+              <p>立即體驗神奇功能並享限時優惠！</p>
+            </div>
+            <div className="col-span-12 tablet:col-span-7">
+              <img 
+                src={emergencyImg} 
+                alt="" 
+                className='max-w-[80px] max-h-[80px] mb-5 p-[10px]'
+              />
+              <form className='flex flex-col'>
+                <input 
+                  type="text" 
+                  className='mb-3'
+                  placeholder='EMAIL'
+                />
+                <textarea 
+                  cols="30" 
+                  rows="10"
+                  placeholder='COMMENTS'
+                  className='max-h-[7.5rem]'
+                ></textarea>
+                <button 
+                  className='bg-primary-200 w-full tablet:w-1/2 py-2 rounded-[0.25rem] ml-auto mt-3 flex items-center justify-center' 
+                  type='submit'
+                >
+                  <img 
+                    src={point_scanImg} 
+                    alt="" 
+                    className='w-[18px] h-[18px] mr-2'
+                  />
+                  送出
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
