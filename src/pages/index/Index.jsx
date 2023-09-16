@@ -169,9 +169,9 @@ const Index = () => {
       </div>
       {/* --- END  --- */}
 
-      <div className={`${styles['news-bg']} pt-[160px] pb-[40px]`}>
+      <div className={`${styles['news-bg']} pt-[160px] pb-[40px] px-2-1/2`}>
         <div className='desktop:container desktop:px-2-1/2 text-white font-bold'>
-          <h2 className='tracking-[3rem] fs-48 mb-8'>最新消息</h2>
+          <h2 className='tracking-[2.5rem] fs-40 text-center -mr-[40px] tablet:mr-[0] tablet:tracking-[3rem] tablet:fs-48 tablet:text-left mb-8'>最新消息</h2>
           <div className='grid grid-cols-12'>
             <div className="col-span-12 py-8 px-3 border-y border-solid border-white border-l-0 border-r-0">
               <p className='tracking-[1rem] flex items-center mb-2'>
@@ -188,12 +188,17 @@ const Index = () => {
                 <img 
                   src={line_end_arrow_notchImg} 
                   alt="" 
-                  className='w-[192px] h-[24px] object-contain'
+                  className='w-[192px] h-[24px] object-contain hidden tablet:block'
                 />
               </p>
               <p>歡迎您了解本次升級帶來的更為卓越的性能！</p>
+              <img 
+                src={line_end_arrow_notchImg} 
+                alt="" 
+                className='w-[192px] h-[24px] mt-2-1/2 object-contain block tablet:hidden'
+              />
             </div>
-            <div className="col-span-6 py-8 px-3 border-solid border-b border-white">
+            <div className="col-span-12 tablet:col-span-6 py-8 px-3 border-solid border-b border-white">
               <p className='tracking-[1rem] flex items-center mb-2'>
                 <img 
                   src={emergencyImg} 
@@ -212,7 +217,7 @@ const Index = () => {
                 className='w-[90px] h-[24px] block object-contain'
               />
             </div>
-            <div className="col-span-6 px-3 py-8 border-l border-white border-b border-solid">
+            <div className="col-span-12 tablet:col-span-6 px-3 py-8 border-l-0 tablet:border-l border-white border-b border-solid">
               <p className='tracking-[1rem] flex items-center mb-2'>
                 <img 
                   src={emergencyImg} 
@@ -242,7 +247,7 @@ const Index = () => {
               className='w-[132px] h-[132px]'
             />
           </a>
-          <p className='text-end'>為環保盡一份心力，我們的包裝盒和紙質說明書都使用環保材料</p>
+          <p className='text-end hidden tablet:block'>為環保盡一份心力，我們的包裝盒和紙質說明書都使用環保材料</p>
         </div>
       </div>
     </div>
