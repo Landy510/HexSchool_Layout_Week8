@@ -9,7 +9,7 @@ const Index = () => {
     <div>
       {/* --- desktop layout | START  --- */}
       <div className={`${styles['gradient-bg']} hidden tablet:block`}>
-        <div className='px-5 pt-11'>
+        <div className='desktop:px-15 px-5 pt-11'>
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-3 flex">
               <p className='pb-2 mt-auto text-white border-[1px] border-solid border-t-0 border-l-0 border-r-0 border-white font-bold'>最新消息！新版本 v15.4 釋出，搶先體驗！</p>
@@ -27,7 +27,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="px-5 relative bottom-[-100px]">
+        <div className="px-5 desktop:px-15 relative bottom-[-100px]">
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-3 flex flex-col">
               <img 
@@ -45,11 +45,11 @@ const Index = () => {
                 }
               </h2>
               <p className='text-center text-white font-bold tracking-[1.5rem] mb-5'>擁抱未來科技，專屬您的3D立體投影陪伴機器人</p>
-              <div className="row">
-                <div className="col-6">
+              <div className="grid grid-cols-12">
+                <div className="col-span-6">
                   <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/felix.png?raw=true" alt="" />
                 </div>
-                <div className="col-6">
+                <div className="col-span-6">
                   <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/karina.png?raw=true" alt="" />
                 </div>
               </div>
@@ -68,13 +68,13 @@ const Index = () => {
       </div>
 
       <div className={`${styles['img-bg']} fs-48 text-white font-bold tracking-[3rem] pb-[52px] pt-[144px] hidden tablet:block`}>
-        <div className='px-5'>
+        <div className='px-5 desktop:px-15'>
           <div className='bg-gradient-to-r from-primary-500 to-primary-300 h-[40px]'></div>
           <p className='mb-[12px]'>什麼是</p>
           <p className='mb-3'>ALPHABOX+</p>
         </div>
         <div className="bg-white h-[1px]"></div>
-        <div className='flex items-center justify-center py-6 px-5'>
+        <div className='flex items-center justify-center py-6 px-5 desktop:px-15'>
           <div>
             <img 
               src={line_start_arrow_hoverImg} 
@@ -97,12 +97,12 @@ const Index = () => {
             />
           </div>
         </div>
-        <div className='bg-gradient-to-r from-primary-500 to-primary-300 h-[40px] mx-5'></div>
+        <div className='bg-gradient-to-r from-primary-500 to-primary-300 h-[40px] mx-5 desktop:mx-15'></div>
       </div>
       {/* --- END  --- */}
 
       {/* --- mobile layout | START  --- */}
-      <div className={`${styles['gradient-bg']} block tablet:hidden px-2-1/2`}>
+      <div className={`${styles['gradient-bg']} block tablet:hidden px-2-1/2 pt-[28px]`}>
         <p className='pt-2 mb-11 text-white border-[1px] border-solid border-b-0 border-l-0 border-r-0 border-white font-bold tracking-[calc(1rem*0.1)]'>ALPHABOX+ STUDIO</p>
         <img 
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/circle.png?raw=true" 

@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 // variables
-@import 'bootstrap/scss/functions';
+// @import 'bootstrap/scss/functions';
 @import './variables/variables';
-@import 'bootstrap/scss/mixins';
+// @import 'bootstrap/scss/mixins';
 
 // utils
 @import './utils/fontStyle';
@@ -14,7 +14,7 @@
 @import './base/base';
 
 // vendors
-@import './vendors/bootstrap';
+// @import './vendors/bootstrap';
 @import './vendors/tailwindCSS';
 
 // components
