@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.scss';
 import Header from '@/laylout/header/Header';
 import Index from '@/pages/index/Index';
+import Footer from '@/laylout/footer/Footer';
 function App() {
 
   return (
@@ -10,6 +11,7 @@ function App() {
       <main>
         <Index />
       </main>
+      <Footer />
     </>
   )
 }

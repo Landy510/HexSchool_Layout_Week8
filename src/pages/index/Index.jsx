@@ -108,7 +108,7 @@ const Index = () => {
                 }
               </h2>
               <p className='text-center text-white font-bold tracking-[1.5rem] mb-5'>擁抱未來科技，專屬您的3D立體投影陪伴機器人</p>
-              <div className="grid grid-cols-12">
+              <div className="grid grid-cols-12 gap-6">
                 <div className="col-span-6">
                   <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/felix.png?raw=true" alt="" />
                 </div>
@@ -118,8 +118,6 @@ const Index = () => {
               </div>
             </div>
             <div className="col-span-3 flex flex-col">
-              {/* <p className='py-2 mt-auto mb-11 text-white border-[1px] border-solid border-b-0 border-l-0 border-r-0 border-white font-bold'>ALPHABOX+ STUDIO</p>
-              <p className='text-[#AD93CF] font-medium mb-11'>Copyright © 2023 Hexschool.</p> */}
               <img 
                   src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/vito.png?raw=true" 
                   alt="" 
