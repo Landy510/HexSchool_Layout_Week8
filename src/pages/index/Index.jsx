@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './index.module.scss';
 import carouselImg from '@/assets/images/carousel.png';
 import line_end_arrow_defaultImg from '@/assets/images/line_end_arrow_default.png';
@@ -9,6 +10,62 @@ import seeMoreImg from '@/assets/images/see-more.png';
 import point_scanImg from '@/assets/images/point_scan.png';
 import ALPHABOXTextImg from '@/assets/images/ALPHABOX+.png';
 import Swiper from './components/swiper/Swiper';
+
+const AIInfo = [
+  {
+    name: 'Diane',
+    type: '知識型',
+    detail: '學術領導/知識分享/智能問答',
+    bgImgUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/diane.png?raw=true'
+  },
+  {
+    name: 'Felix',
+    type: '娛樂型',
+    detail: '音樂播放/語音互動/遊戲陪伴',
+    bgImgUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/felix.png?raw=true'
+  },
+  {
+    name: 'Karina',
+    type: '生活型',
+    detail: '健康提醒/日程安排/智能家居',
+    bgImgUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/karina.png?raw=true'
+  },
+  {
+    name: 'Vito',
+    type: '情感型',
+    detail: '情感識別/心情分析/心靈支持',
+    bgImgUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/vito.png?raw=true'
+  },
+]
+
+const DisplayAICard = ({index, name, type, detail, bgImgUrl}) => {
+  return (
+    <a 
+      className={[
+        styles['displayAIcard'],
+        'text-white text-center w-1/2 px-2-1/2 py-5',
+        'tablet:w-1/4 tablet:px-[2.5rem] tablet:py-[3.5rem]'
+      ].join(' ')}
+      style={{
+        backgroundImage: `url(${bgImgUrl})`
+      }}
+    >
+      <span className='fs-128 tablet:text-[25rem] saira-extra-condensed'>{index}</span>
+      <p className='shrikhand fs-32 mb-15'>{name}</p>
+      <div className='text-left'>
+        <p className='font-bold'>{type}</p>
+        <p className='flex flex-wrap tablet:flex-nowrap justify-between'>
+          <span>{detail}</span>
+          <img 
+            src={line_end_arrow_notchImg} 
+            alt="" 
+            className='object-contain w-full basis-[155px] mt-2-1/2 tablet:mt-0'
+          />
+        </p>
+      </div>
+    </a>
+  )
+}
 
 const Index = () => {
   return (
@@ -357,8 +414,32 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      {/* 展覽 AI 區塊 */}
+      <div className='flex flex-wrap'>
+        {
+          AIInfo.map((info, index) => {
+            return <DisplayAICard 
+              key={index}
+              index={index+1}
+              name={info.name}
+              type={info.type}
+              detail={info.detail}
+              bgImgUrl={info.bgImgUrl}
+            />
+          })
+        }
+      </div>
     </div>
   )
 }
 
 export default Index;
+
+DisplayAICard.propTypes = {
+  index: PropTypes.number,
+  name: PropTypes.string, 
+  type: PropTypes.string,
+  detail: PropTypes.string, 
+  bgImgUrl: PropTypes.string 
+}
