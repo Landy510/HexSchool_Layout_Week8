@@ -55,11 +55,12 @@ const DisplayAICard = ({index, name, type, detail, bgImgUrl}) => {
       <div className='text-left'>
         <p className='font-bold'>{type}</p>
         <p className='flex flex-wrap tablet:flex-nowrap justify-between'>
-          <span>{detail}</span>
+          <span className='mr-2-1/2'>{detail}</span>
           <img 
             src={line_end_arrow_notchImg} 
             alt="" 
-            className='object-contain w-full basis-[155px] mt-2-1/2 tablet:mt-0'
+            // className='object-contain w-full basis-[155px] mt-2-1/2 tablet:mt-0'
+            className='object-contain w-full max-w-[155px] mt-2-1/2 tablet:mt-0'
           />
         </p>
       </div>
