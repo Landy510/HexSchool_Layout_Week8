@@ -40,7 +40,7 @@ const CustomizedSwiper = () => {
   }, [])
 
   return (
-    <div className="swiper mySwiper" ref={swiperRef}>
+    <div className="swiper mySwiper !overflow-visible" ref={swiperRef}>
       <div className="swiper-wrapper">
         {
           Array.from({length: 4}).map((val, index) => {
