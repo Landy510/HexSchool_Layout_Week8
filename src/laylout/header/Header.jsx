@@ -1,5 +1,7 @@
 import pointScanImg from '@/assets/images/point_scan.svg';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 const Header = () => {
   const [isDropDownShow, setIsDropDownShow] = useState(false)
   return (
@@ -9,18 +11,20 @@ const Header = () => {
       <div 
         className="desktop:container px-2-1/2 flex items-center justify-between"
       >
-        <a 
-          href="#"
+        <Link  
+          to={'/'}
           className="shrikhand fs-32 text-white"
         >
           ALPHABOX+
-        </a>
+        </Link>
         <ul className="text-white hidden tablet:flex">
           <li>
-            <a 
-              href="#"
+            <Link  
+              to={'/products/Diane'}
               className='px-[20px]'
-            >產品</a>
+            >
+              產品
+            </Link>
           </li>
           <li>
             <a 

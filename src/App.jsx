@@ -1,7 +1,7 @@
 import { useState } from 'react'
+import { Outlet } from 'react-router-dom';
 import './App.scss';
 import Header from '@/laylout/header/Header';
-import Index from '@/pages/index/Index';
 import Footer from '@/laylout/footer/Footer';
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <main>
-        <Index />
+        <Outlet />
       </main>
       <Footer />
     </>
