@@ -1,12 +1,38 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-// import '@/assets/styles/all.scss';
-// import './index.css';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
+import App from './App.jsx';
+import Index from '@/pages/index/Index.jsx';
+import Products from '@/pages/products/Products.jsx';
 import './main.css';
+
+
+const router = createHashRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <Index />
+      },
+      {
+        path: '/products',
+        children: [
+          {
+            index: true,
+            path: ':name',
+            element: <Products />
+          }
+        ]
+      }
+    ]
+  }
+])
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
