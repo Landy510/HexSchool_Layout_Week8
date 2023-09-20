@@ -31,7 +31,7 @@ const Products = () => {
   return (
     <>
       <ProductNameTabs productNames={productNames}/>
-      <ProductDetail productInfo={productInfo} />
+      <ProductDetail key={productInfo.name} productInfo={productInfo} />
       <div>Products</div>
     </>
     

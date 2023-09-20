@@ -59,7 +59,6 @@ const DisplayAICard = ({index, name, type, detail, bgImgUrl}) => {
           <img 
             src={line_end_arrow_notchImg} 
             alt="" 
-            // className='object-contain w-full basis-[155px] mt-2-1/2 tablet:mt-0'
             className='object-contain w-full max-w-[155px] mt-2-1/2 tablet:mt-0'
           />
         </p>
