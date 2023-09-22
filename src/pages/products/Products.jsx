@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import ProductNameTabs from './components/productNameTabs/ProductNameTabs';
 import ProductDetail from "./components/productDetail/ProductDetail";
+import Introduction from "./components/introduction/Introduction";
 
 const productNames = ['Diane', 'Felix', 'Karina', 'Vito'];
 const productsDetail = [
@@ -32,6 +33,7 @@ const Products = () => {
     <>
       <ProductNameTabs productNames={productNames}/>
       <ProductDetail key={productInfo.name} productInfo={productInfo} />
+      <Introduction />
       <div>Products</div>
     </>
     
