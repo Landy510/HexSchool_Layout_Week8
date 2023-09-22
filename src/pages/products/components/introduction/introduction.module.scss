@@ -1,4 +1,6 @@
 .introduction-card {
+  @apply pointer-events-none tablet:pointer-events-none desktop:pointer-events-auto;
+
   & > p:nth-of-type(1) {
     position: relative;
 
