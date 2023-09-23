@@ -6,7 +6,7 @@ const Header = () => {
   const [isDropDownShow, setIsDropDownShow] = useState(false)
   return (
     <header className={[
-      'bg-primary-300 py-[16px] relative border-[1px] border-l-[0] border-r-[0] border-t-[0] border-white border-solid',
+      'shadow-[0_0_1rem_rgba(0,0,0,0.5)] tablet:shadow-none desktop:shadow-none bg-primary-300 py-[16px] relative border-[1px] border-l-[0] border-r-[0] border-t-[0] border-white border-solid',
     ].join(' ')}>
       <div 
         className="desktop:container px-2-1/2 flex items-center justify-between"
@@ -88,14 +88,16 @@ const Header = () => {
           </button>
         </div>
         <ul className={[
-          'top-[100%] left-0 right-0 bg-gradient-to-b from-primary-300 to-primary-500 text-white font-medium pt-[24px] pb-[32px] mt-[1px]',
+          'top-[100%] left-[0px] right-[0px] bg-gradient-to-b from-primary-300 to-primary-500 text-white font-medium pt-[24px] pb-[32px] mt-[1px] z-10',
           isDropDownShow ? 'absolute' : 'hidden'
         ].join(' ')}>
           <li>
-            <a 
-              href=""
-              className='py-[8px] w-full block text-center'
-            >產品</a>
+            <Link  
+              to={'/products/Diane'}
+              className='py-2 w-full block text-center'
+            >
+              產品
+            </Link>
           </li>
           <li>
             <a 
