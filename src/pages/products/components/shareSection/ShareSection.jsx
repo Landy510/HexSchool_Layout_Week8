@@ -1,4 +1,4 @@
-import styles from './ShareSection.module.scss';
+import styles from './shareSection.module.scss';
 const ShareSection = () => {
   return (
     <div 
