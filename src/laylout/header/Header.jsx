@@ -27,10 +27,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a 
-              href=""
+            <Link  
+              to={'/aboutUs'}
               className='px-[20px]'
-            >關於我們</a>
+            >
+              關於我們
+            </Link>
           </li>
           <li>
             <a 
