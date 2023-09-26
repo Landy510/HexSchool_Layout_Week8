@@ -49,6 +49,10 @@ export default {
           400: '#1F0F39',
           500: '#11002D'
         }
+      },
+      backgroundSize: {
+        '60%': '60%',
+        '100%': '100%'
       }
     },
     screens: {
