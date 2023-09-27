@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom';
 import './App.scss';
-import Header from '@/laylout/header/Header';
-import Footer from '@/laylout/footer/Footer';
+import Header from '@/layout/header/Header';
+import Footer from '@/layout/footer/Footer';
 function App() {
 
   return (

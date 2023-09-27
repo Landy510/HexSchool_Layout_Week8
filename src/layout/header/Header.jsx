@@ -41,10 +41,12 @@ const Header = () => {
             >最新消息</a>
           </li>
           <li>
-            <a 
-              href=""
+            <Link  
+              to={'/FAQ'}
               className='px-[20px]'
-            >FAQ</a>
+            >
+              FAQ
+            </Link>
           </li>
           <li>
             <a 
@@ -102,10 +104,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a 
-              href=""
+            <Link  
+              to={'/aboutUs'}
               className='py-[8px] w-full block text-center'
-            >關於我們</a>
+            >
+              關於我們
+            </Link>
           </li>
           <li>
             <a 
@@ -114,10 +118,12 @@ const Header = () => {
             >最新消息</a>
           </li>
           <li>
-            <a 
-              href=""
+            <Link  
+              to={'/FAQ'}
               className='py-[8px] w-full block text-center'
-            >FAQ</a>
+            >
+              FAQ
+            </Link>
           </li>
           <li>
             <a 
