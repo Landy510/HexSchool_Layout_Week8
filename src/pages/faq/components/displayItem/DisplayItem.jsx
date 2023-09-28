@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import PropTypes from 'prop-types';
+
 
 function getStyle(element) {
   if (typeof getComputedStyle !== 'undefined') {
@@ -7,7 +9,7 @@ function getStyle(element) {
   return element.currentStyle; // Old IE
 }
 
-const getDimension = (isOpen, elRef) => {
+const collapseAnimation = (isOpen, elRef) => {
   if (!elRef.current) return;
 
   if (!isOpen) {
@@ -46,19 +48,19 @@ const getDimension = (isOpen, elRef) => {
   }
 };
 
-const DisplayItem = () => {
+const DisplayItem = ({content}) => {
   const contentRef = useRef(null);
   const [isCollapse, setIsCollapse] = useState(false);
 
   const handleClick = () => {
-    getDimension(isCollapse, contentRef);
+    collapseAnimation(isCollapse, contentRef);
     setIsCollapse(prev => !prev)
   }
 
   return (
     <>
-      <p className="font-medium relative">
-        ALPHABOX+ 的使用方式是什麼？
+      <p className="font-medium relative pr-8">
+        {content.headerTxt}
         <button 
           type="button"
           className="absolute right-[0px] top-1/2 -translate-y-1/2"
@@ -70,10 +72,19 @@ const DisplayItem = () => {
         </button>
       </p>
       <div className="cusCollapse" ref={contentRef}>
-        首先請確保機器人已安裝並連接至Wi-Fi，然後使用專屬的應用程式進行設定。隨後即可透過語音指令或應用程式與機器人進行互動。
+        <p className="pt-3">
+          {content.contentTxt}
+        </p>
       </div>
     </>
   )
 }
 
 export default DisplayItem;
+
+DisplayItem.propTypes = {
+  content: PropTypes.shape({
+    headerTxt: PropTypes.string,
+    contentTxt: PropTypes.string,
+  })
+}
