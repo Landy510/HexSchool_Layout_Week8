@@ -1,0 +1,13 @@
+.collapse {
+
+  &:not(.show) {
+    display: none;
+  }
+}
+
+.transitioning {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s;
+  background-color: #fa0;
+}
