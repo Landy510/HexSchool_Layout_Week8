@@ -6,6 +6,7 @@ import Index from '@/pages/index/Index.jsx';
 import Products from '@/pages/products/Products.jsx';
 import AboutUs from '@/pages/aboutUs/AboutUs.jsx';
 import FAQ from '@/pages/faq/FAQ.jsx';
+import ContactUs from '@/pages/contactUs/ContactUs.jsx';
 import './main.css';
 
 
@@ -35,6 +36,10 @@ const router = createHashRouter([
       {
         path: '/FAQ',
         element: <FAQ />
+      },
+      {
+        path: '/contactUs',
+        element: <ContactUs />
       }
     ]
   }

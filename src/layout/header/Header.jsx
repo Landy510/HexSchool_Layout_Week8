@@ -49,10 +49,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a 
-              href=""
+            <Link  
+              to={'/contactUs'}
               className='px-[20px]'
-            >聯絡我們</a>
+            >
+              聯絡我們
+            </Link>
           </li>
         </ul>
         <ul className="text-white items-center hidden tablet:flex">
@@ -126,10 +128,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a 
-              href=""
+            <Link  
+              to={'/contactUs'}
               className='py-[8px] w-full block text-center'
-            >聯絡我們</a>
+            >
+              聯絡我們
+            </Link>
           </li>
           <li>
             <a 
