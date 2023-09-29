@@ -1,5 +1,13 @@
 import styles from './contactUs.module.scss';
 import point_scanImg from '@/assets/images/point_scan.png';
+import diane_horizontalImg from '@/assets/images/diane_horizontal.png';
+import felix_horizontalImg from '@/assets/images/felix_horizontal.png';
+import karina_horizontalImg from '@/assets/images/karina_horizontal.png';
+import vito_horizontalImg from '@/assets/images/vito_horizontal.png';
+import diane_chooseImg from '@/assets/images/diane_choose.png';
+import felix_chooseImg from '@/assets/images/felix_choose.png';
+import karina_chooseImg from '@/assets/images/karina_choose.png';
+import vito_chooseImg from '@/assets/images/vito_choose.png';
 
 const ContactUs = () => {
   return (
@@ -110,8 +118,82 @@ const ContactUs = () => {
           </ul>
         </div>
       </div>
+
+      <div className='bg-white pt-[3.75rem] tablet:pt-[10rem] desktop:pt-[10rem] pb-[2.5rem] tablet:pb-[7.5rem] desktop:pn-[7.5rem]'>
+        <div className="desktop:container px-2-1/2 mb-5 tablet:mb-15 desktop:mb-15">
+          <h2 className='font-black text-[2.5rem] tracking-[2.5rem] tablet:text-[3rem] tablet:tracking-[3rem] desktop:text-[4rem] desktop:tracking-[4rem] mb-5'>選擇自己要的角色</h2>
+          <p className='text-[1.5rem] tablet:text-[3rem] desktop:text-[3rem] font-black'>
+            <span className='text-primary-200 mr-5'>20K+</span>
+            使用者喜歡我們的服務
+          </p>
+        </div>
+
+        <div className='relative'>
+          <picture>
+            <source 
+                media="(min-width:768px)" 
+                srcSet={diane_horizontalImg} 
+            />
+            <img 
+                src={diane_chooseImg} 
+                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full'
+            />
+          </picture>
+          <p className='desktop:container px-2-1/2 absolute shrikhand text-white text-[2.5rem] tablet:text-[3rem] desktop:text-[4rem] top-1/2 left-[0] right-[0] -translate-y-1/2'>
+            Diane
+          </p>
+          
+        </div>
+        <div className='relative'>
+          <picture>
+            <source 
+                media="(min-width:768px)" 
+                srcSet={felix_horizontalImg} 
+            />
+            <img 
+                src={felix_chooseImg} 
+                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full ml-auto'
+            />
+          </picture>
+          <p className='text-end desktop:container px-2-1/2 absolute shrikhand text-white text-[2.5rem] tablet:text-[3rem] desktop:text-[4rem] top-1/2 left-[0] right-[0] -translate-y-1/2'>
+            Felix
+          </p>
+          
+        </div>
+        <div className='relative'>
+          <picture>
+            <source 
+                media="(min-width:768px)" 
+                srcSet={karina_horizontalImg} 
+            />
+            <img 
+                src={karina_chooseImg} 
+                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full'
+            />
+          </picture>
+          <p className='desktop:container px-2-1/2 absolute shrikhand text-white text-[2.5rem] tablet:text-[3rem] desktop:text-[4rem] top-1/2 left-[0] right-[0] -translate-y-1/2'>
+            Karina
+          </p>
+          
+        </div>
+        <div className='relative'>
+          <picture>
+            <source 
+                media="(min-width:768px)" 
+                srcSet={vito_horizontalImg} 
+            />
+            <img 
+                src={vito_chooseImg} 
+                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full ml-auto'
+            />
+          </picture>
+          <p className='text-end desktop:container px-2-1/2 absolute shrikhand text-white text-[2.5rem] tablet:text-[3rem] desktop:text-[4rem] top-1/2 left-[0] right-[0] -translate-y-1/2'>
+            Vito
+          </p>
+          
+        </div>
+      </div>
     </>
-    
   )
 }
 
