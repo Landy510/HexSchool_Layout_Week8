@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styles from './contactUs.module.scss';
 import point_scanImg from '@/assets/images/point_scan.png';
 import diane_horizontalImg from '@/assets/images/diane_horizontal.png';
@@ -8,8 +9,17 @@ import diane_chooseImg from '@/assets/images/diane_choose.png';
 import felix_chooseImg from '@/assets/images/felix_choose.png';
 import karina_chooseImg from '@/assets/images/karina_choose.png';
 import vito_chooseImg from '@/assets/images/vito_choose.png';
+import AOS from 'aos';
 
 const ContactUs = () => {
+
+  useEffect(() => {
+    AOS.init({
+      offset: 120,
+      once: true
+    })
+  }, [])
+
   return (
     <>
       <div
@@ -128,6 +138,7 @@ const ContactUs = () => {
           </p>
         </div>
 
+        <div className='overflow-y-hidden'>
         <div className='relative'>
           <picture>
             <source 
@@ -136,7 +147,8 @@ const ContactUs = () => {
             />
             <img 
                 src={diane_chooseImg} 
-                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full'
+                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full '
+                data-aos="fade-right"
             />
           </picture>
           <p className='desktop:container px-2-1/2 absolute shrikhand text-white text-[2.5rem] tablet:text-[3rem] desktop:text-[4rem] top-1/2 left-[0] right-[0] -translate-y-1/2'>
@@ -152,7 +164,8 @@ const ContactUs = () => {
             />
             <img 
                 src={felix_chooseImg} 
-                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full ml-auto'
+                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full ml-auto '
+                data-aos="fade-left"
             />
           </picture>
           <p className='text-end desktop:container px-2-1/2 absolute shrikhand text-white text-[2.5rem] tablet:text-[3rem] desktop:text-[4rem] top-1/2 left-[0] right-[0] -translate-y-1/2'>
@@ -168,7 +181,8 @@ const ContactUs = () => {
             />
             <img 
                 src={karina_chooseImg} 
-                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full'
+                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full '
+                data-aos="fade-left"
             />
           </picture>
           <p className='desktop:container px-2-1/2 absolute shrikhand text-white text-[2.5rem] tablet:text-[3rem] desktop:text-[4rem] top-1/2 left-[0] right-[0] -translate-y-1/2'>
@@ -184,7 +198,8 @@ const ContactUs = () => {
             />
             <img 
                 src={vito_chooseImg} 
-                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full ml-auto'
+                className='tablet:max-w-[1388px] tablet:w-full desktop:max-w-[1388px] desktop:w-full ml-auto '
+                data-aos="fade-right"
             />
           </picture>
           <p className='text-end desktop:container px-2-1/2 absolute shrikhand text-white text-[2.5rem] tablet:text-[3rem] desktop:text-[4rem] top-1/2 left-[0] right-[0] -translate-y-1/2'>
@@ -192,6 +207,8 @@ const ContactUs = () => {
           </p>
           
         </div>
+        </div>
+        
       </div>
     </>
   )
