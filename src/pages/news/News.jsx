@@ -1,4 +1,5 @@
 import styles from './news.module.scss';
+import Pagination from '@/components/pagination/Pagination';
 import emergencyImg from '@/assets/images/emergency.png';
 
 import newsImg from '@/assets/images/news.png';
@@ -15,6 +16,7 @@ import thanksImg from '@/assets/images/thanks.png';
 
 import updateMobileImg from '@/assets/images/update_mobile.png';
 import updateImg from '@/assets/images/update.png';
+import { useState } from 'react';
 
 const listInfo = [
   {
@@ -51,22 +53,72 @@ const listInfo = [
     date: '2023.06.30',
     titleTxt: '新功能上線',
     contentTxt: '為使您的3D立體陪伴機器人更趨完善，我們不懈地研發創新功能。近期，我們新推出智慧家居控制功能，使您的機器人能更便利地協助您操作家中各類智能設備。近期，我們新推出智慧家居控制功能。' 
-  }
+  },
+  {
+    imgUrl: newsImg,
+    imgMobileUrl: newsMobileImg,
+    date: '2023.06.30',
+    titleTxt: '產品最新公告',
+    contentTxt: '榮幸地宣布，ALPHABOX+ 已成功完成最新一代的升級！本次升級包括提升投影解析度、優化語音辨識技術，以及擴充情感識別功能。歡迎您了解本次升級帶來的更為卓越的性能！' 
+  },
+  {
+    imgUrl: thanksImg,
+    imgMobileUrl: thanksMobileImg,
+    date: '2023.06.30',
+    titleTxt: '參加科技展覽',
+    contentTxt: '本公司將參與今年的台灣國際科技展覽，屆時將展示最新款的3D立體陪伴機器人。誠摯邀請您親臨現場，親自體驗這款創新的產品！屆時將展示最新款的3D立體陪伴機器人。誠摯邀請您親臨現場，親自體驗這款創新的產品！' 
+  },
+  {
+    imgUrl: interviewImg,
+    imgMobileUrl: interviewMobileImg,
+    date: '2023.06.30',
+    titleTxt: '用戶見面會',
+    contentTxt: '為進一步滿足客戶需求，並優化產品性能，我們將舉行用戶見面會。屆時，我們將向您展示我們的研發成果，同時聆聽您的意見和建議，讓我們共同打造更完美的產品！同時聆聽您的意見和建議！' 
+  },
+  {
+    imgUrl: thanksImg,
+    imgMobileUrl: thanksMobileImg,
+    date: '2023.06.01',
+    titleTxt: '限時優惠活動',
+    contentTxt: '為答謝廣大用戶的支持，本月將舉辦一場限時優惠活動。購買 ALPHABOX+ 的顧客，皆可享受九折優惠。機會難得，請勿錯過此良機！本月將舉辦一場限時優惠活動。購買 ALPHABOX+ 的顧客，皆可享受九折優惠。' 
+  },
+  {
+    imgUrl: updateImg,
+    imgMobileUrl: updateMobileImg,
+    date: '2023.06.30',
+    titleTxt: '新功能上線',
+    contentTxt: '為使您的3D立體陪伴機器人更趨完善，我們不懈地研發創新功能。近期，我們新推出智慧家居控制功能，使您的機器人能更便利地協助您操作家中各類智能設備。近期，我們新推出智慧家居控制功能。' 
+  },
+  {
+    imgUrl: updateImg,
+    imgMobileUrl: updateMobileImg,
+    date: '2023.06.30',
+    titleTxt: '新功能上線',
+    contentTxt: '為使您的3D立體陪伴機器人更趨完善，我們不懈地研發創新功能。近期，我們新推出智慧家居控制功能，使您的機器人能更便利地協助您操作家中各類智能設備。近期，我們新推出智慧家居控制功能。' 
+  },
 ]
 
+const numShouldBeDisplayedPerPage = 5;
+
 const News= () => {
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
+
+  const displayedList = listInfo
+                          .map((info, index) => ({...info, index: index}))
+                          .slice(currentPageIndex*numShouldBeDisplayedPerPage, (currentPageIndex*numShouldBeDisplayedPerPage + numShouldBeDisplayedPerPage))
   return (
+    <>
     <div className={
         [
           styles['container-bg'],
-          'text-white px-2-1/2 pt-[3.75rem] pb-15 tablet:pt-[10rem] tablet:pb-[7.5rem] desktop:pt-[10rem] desktop:pb-[7.5rem]'
+          'text-white px-2-1/2 pt-[3.75rem] tablet:pt-[10rem] desktop:pt-[10rem]'
         ].join(' ')
       }
     >
       <h2 className='mb-[3.75rem] text-left tablet:text-center desktop:text-center font-black text-[2.5rem] tracking-[2.5rem] tablet:text-[3rem] desktop:text-[3rem] tablet:tracking-[3rem] desktop:tracking-[3rem]'>最新消息</h2>
       <ol>
         {
-          listInfo.map((info, index) => {
+          displayedList.map((info, index) => {
             return <li 
               className={
                 [
@@ -77,7 +129,7 @@ const News= () => {
               key={index}
             >
             <div className='flex items-center tablet:mr-5 desktop:mr-5'>
-              <span className='text-[6rem] tablet:text-[8rem] desktop:text-[8rem] saira-extra-condensed mr-3 tablet:mr-[81px] desktop:mr-[81px]'>{index + 1}</span>
+              <span className='text-[6rem] tablet:text-[8rem] desktop:text-[8rem] saira-extra-condensed mr-3 tablet:mr-[81px] desktop:mr-[81px]'>{info.index + 1}</span>
               <picture>
                 <source 
                   media="(min-width:768px)" 
@@ -112,7 +164,16 @@ const News= () => {
           })
         }
       </ol>
+      <div className='pt-8 tablet:pt-15 desktop:pt-15 pb-15 tablet:pb-[7.5rem] desktop:pb-[7.5rem]'>
+        <Pagination 
+          dataLength={listInfo.length}
+          quantityToDisplayPerPage={numShouldBeDisplayedPerPage}
+          activePageIndex={currentPageIndex}
+          clickEvt={index => setCurrentPageIndex(index)}
+        />
+      </div>
     </div>
+    </>
   )
 }
 
