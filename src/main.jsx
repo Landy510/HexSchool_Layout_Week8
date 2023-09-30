@@ -11,7 +11,7 @@ import News from '@/pages/news/News.jsx';
 import NewsDetail from '@/pages/news/pages/newsDetail/NewsDetail.jsx';
 import RegisterRootComponent from '@/pages/register/index.jsx';
 import Register from '@/pages/register/pages/register/Register.jsx';
-import Login from '@/pages/register/pages/Login/Login.jsx';
+import Login from '@/pages/register/pages/login/Login.jsx';
 import './main.css';
 
 
