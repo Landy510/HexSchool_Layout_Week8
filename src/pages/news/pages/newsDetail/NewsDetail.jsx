@@ -1,10 +1,17 @@
+import { useParams, Link } from 'react-router-dom';
 import styles from './newsDetail.module.scss';
-import news_inDetailImg from '@/assets/images/news_inDetail.png';
+
 import emergencyImg from '@/assets/images/emergency.png';
 import line_start_arrow_notchImg from '@/assets/images/line_start_arrow_notch.png';
-
+import line_end_arrow_disableImg from '@/assets/images/line_end_arrow_disable.png';
+import { listInfo } from '../../utils/data';
 
 const NewsDetail = () => {
+  const id = +useParams().id;
+  const info = listInfo.find(item => item.id === id);
+  
+  if(!info) return null;
+
   return (
     <div className={
       [
@@ -16,9 +23,9 @@ const NewsDetail = () => {
         <h2 className='mb-[3.75rem] text-left tablet:text-center desktop:text-center font-black text-[2.5rem] tracking-[2.5rem] tablet:text-[3rem] desktop:text-[3rem] tablet:tracking-[3rem] desktop:tracking-[3rem]'>最新消息</h2>
         <div className='flex flex-wrap -mx-2-1/2'>
           <div className='px-2-1/2 w-full tablet:w-[33.3333%] desktop:tablet:w-[33.3333%] flex flex-col'>
-            <a 
+            <Link 
               className='text-white font-medium flex items-center mb-2'
-              href=""
+              to={'/news'}
             >
               <span 
                 className='material-symbols-outlined text-[2.5rem]'
@@ -26,10 +33,10 @@ const NewsDetail = () => {
                 arrow_insert
               </span>
               返回
-            </a>
+            </Link>
             
             <img 
-              src={news_inDetailImg} 
+              src={info.imgInDetail} 
               alt="" 
               className='grow'
             />
@@ -60,23 +67,42 @@ const NewsDetail = () => {
         </div>
         <div className='flex flex-wrap -mx-2-1/2'>
           <div className='px-2-1/2 w-full tablet:w-[33.3333%] desktop:tablet:w-[33.3333%]'></div>
-          <div className='flex justify-between mt-5 px-2-1/2 w-full tablet:w-[66.6667%] desktop:tablet:w-[66.6667%]'>
-            <a href="">
+          <div className='flex justify-between items-start mt-5 px-2-1/2 w-full tablet:w-[66.6667%] desktop:tablet:w-[66.6667%]'>
+            {
+              id === 0 ? 
               <img 
-                src={line_start_arrow_notchImg} 
+                src={line_end_arrow_disableImg} 
                 alt="" 
-                className='max-w-[155px]'
+                className='max-w-[155px] rotate-180 object-contain'
               />
-              <p>上一則</p>
-            </a>
-            <a href="">
+              :
+              <Link to={`/news/${id - 1}`}>
+                <img 
+                  src={line_start_arrow_notchImg} 
+                  alt="" 
+                  className='max-w-[155px]'
+                />
+                <p>上一則</p>
+              </Link>
+            }
+            
+            {
+              listInfo.length - 1 === id ? 
               <img 
-                src={line_start_arrow_notchImg} 
+                src={line_end_arrow_disableImg} 
                 alt="" 
-                className='max-w-[155px] rotate-180'
+                className='max-w-[155px] object-contain'
               />
-              <p>上一則</p>
-            </a>
+              :
+              <Link to={`/news/${id + 1}`}>
+                <img 
+                  src={line_start_arrow_notchImg} 
+                  alt="" 
+                  className='max-w-[155px] rotate-180'
+                />
+                <p>下一則</p>
+              </Link>
+            }
           </div>
         </div>   
       </div>
