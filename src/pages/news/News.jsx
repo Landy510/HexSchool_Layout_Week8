@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './news.module.scss';
 import Pagination from '@/components/pagination/Pagination';
 import emergencyImg from '@/assets/images/emergency.png';
@@ -16,7 +18,6 @@ import thanksImg from '@/assets/images/thanks.png';
 
 import updateMobileImg from '@/assets/images/update_mobile.png';
 import updateImg from '@/assets/images/update.png';
-import { useState } from 'react';
 
 const listInfo = [
   {
@@ -154,12 +155,12 @@ const News= () => {
               <p className='text-[1.25rem] tracking-[1.25rem] font-medium mb-2'>{info.titleTxt}</p>
               <p>{info.contentTxt}</p>
             </div>
-            <a 
-              href=""
+            <Link 
+              to={`/news/${index}`}
               className='material-symbols-outlined text-[2.5rem] flex items-end mt-3 ml-auto tablet:ml-5 desktop:ml-5'
             >
               arrow_forward
-            </a>
+            </Link>
           </li>
           })
         }
