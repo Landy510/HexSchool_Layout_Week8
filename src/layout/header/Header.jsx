@@ -35,10 +35,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a 
-              href=""
+            <Link  
+              to={'/news'}
               className='px-[20px]'
-            >最新消息</a>
+            >
+              最新消息
+            </Link>
           </li>
           <li>
             <Link  
@@ -114,10 +116,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a 
-              href=""
+            <Link  
+              to={'/news'}
               className='py-[8px] w-full block text-center'
-            >最新消息</a>
+            >
+              最新消息
+            </Link>
           </li>
           <li>
             <Link  

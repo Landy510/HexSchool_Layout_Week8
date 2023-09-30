@@ -7,6 +7,7 @@ import Products from '@/pages/products/Products.jsx';
 import AboutUs from '@/pages/aboutUs/AboutUs.jsx';
 import FAQ from '@/pages/faq/FAQ.jsx';
 import ContactUs from '@/pages/contactUs/ContactUs.jsx';
+import News from '@/pages/news/News.jsx';
 import './main.css';
 
 
@@ -40,6 +41,10 @@ const router = createHashRouter([
       {
         path: '/contactUs',
         element: <ContactUs />
+      },
+      {
+        path: '/news',
+        element: <News />
       }
     ]
   }
