@@ -61,16 +61,20 @@ const Header = () => {
         </ul>
         <ul className="text-white items-center hidden tablet:flex">
           <li>
-            <a 
-              href=""
+            <Link 
+              to={'/user/register'}
               className='px-[12px]'
-            >註冊</a>
+            >
+              註冊
+            </Link>
           </li>
           <li>
-            <a 
-              href=""
+            <Link 
+              to={'/user/login'}
               className='px-[12px]'
-            >登入</a>
+            >
+              登入
+            </Link>
           </li>
           <li>
             <a 
@@ -140,16 +144,20 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a 
-              href=""
+            <Link 
               className='py-[8px] w-full block text-center'
-            >註冊</a>
+              to={'/user/register'}
+            >
+              註冊
+            </Link>
           </li>
           <li>
-            <a 
-              href=""
+            <Link 
+              to={'/user/login'}
               className='py-[8px] w-full block text-center'
-            >登入</a>
+            >
+              登入
+            </Link>
           </li>
           <li className='text-center'>
             <a 

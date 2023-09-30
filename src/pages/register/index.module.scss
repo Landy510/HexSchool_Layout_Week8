@@ -1,0 +1,31 @@
+.container-bg {
+  background-image: url('../../assets/images/Rectangle18.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.divider {
+  @apply text-white text-center relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: calc(50% - 15px);
+    top: 60%;
+    transform: translateY(-49%);
+    background-color: #828282;
+    height: 1px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: calc(50% - 15px);
+    top: 60%;
+    transform: translateY(-49%);
+    background-color: #828282;
+    height: 1px;
+  }
+}
