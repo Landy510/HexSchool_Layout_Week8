@@ -14,12 +14,12 @@ const Checkbox = forwardRef(function Checkbox({children}, ref) {
           className="w-[18px] h-[18px] border-white border-[1px] border-solid block rounded-[2px] hover:cursor-pointer flex items-center justify-center"
           onClick={() => setChecked(prev => !prev)}
         >
-          <span className={
-            [
+          <span 
+            className={[
               "material-symbols-outlined text-white",
-              !checked && 'hidden'
-            ].join(' ')
-          }>
+              !checked ? 'opacity-0' : 'opacity-100' // in order to fix the problem that first clicking will show the text instead of the icon in Chrome
+            ].join(' ')}
+          >
             done
           </span>
         </span>
