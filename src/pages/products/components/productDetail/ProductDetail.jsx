@@ -2,38 +2,59 @@ import PropTypes from 'prop-types';
 import line_end_arrow_notchImg from '@/assets/images/line_end_arrow_notch.png';
 import Group_1Img from '@/assets/images/Group_1.png';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { useState } from 'react';
 
-const Button = ({direction = 'prev'}) => {
+const Button = ({direction = 'prev', setJustForTriggeringRender}) => {
   const swiper = useSwiper()
-  console.log()
   return (
-    <button 
-      type="button" 
-      className={[
-        `material-symbols-outlined absolute z-[1] text-white top-1/2 -translate-y-1/2 text-[60px] text-white`,
-        direction === 'prev' ? 'left-[16px]' : 'right-[16px]',
-        direction === 'prev' && swiper.activeIndex === 0 ? 'text-red' : '',
-        direction === 'next' && swiper.activeIndex === swiper.slides.length - 1 ? 'text-black' : ''
-      ].join(' ')}
-      onClick={
-        direction === 'prev' ? 
-        () => {
-          swiper.slidePrev()
-        } : 
-        () => {
-          swiper.slideNext()
-        }
+    <>
+      {
+        direction === 'prev' ?
+        <button 
+          type="button"
+          disabled={swiper.activeIndex === 0}
+          className={[
+            `material-symbols-outlined absolute z-[1] top-1/2 -translate-y-1/2 text-[3.75rem] left-[16px]`,
+            swiper.activeIndex === 0 ? 'text-[white]/[.3]' : 'text-white',
+          ].join(' ')}
+          onClick={
+            () => {
+              swiper.slidePrev()
+              setJustForTriggeringRender({})
+            }
+          }
+        >
+          arrow_circle_left
+        </button>
+        :
+        <button 
+          type="button" 
+          disabled={swiper.activeIndex === swiper.slides.length - 1}
+          className={[
+            `material-symbols-outlined absolute z-[1] top-1/2 -translate-y-1/2 text-[3.75rem] right-[16px]`,
+            swiper.activeIndex === swiper.slides.length - 1 ? 'text-[white]/[.3]' : 'text-white'
+          ].join(' ')}
+          onClick={
+            () => {
+              swiper.slideNext()
+              setJustForTriggeringRender({})
+            }
+          }
+        >
+          arrow_circle_right
+        </button>
       }
-    >
-      {direction === 'prev' ? 'arrow_circle_left' : 'arrow_circle_right'}
-    </button>
+    </>
+    
   )
 }
 
 const ProductImageHaul = ({imgUrls = []}) => {
+  const [justForTriggeringRender, setJustForTriggeringRender] = useState({});
   return (
     <Swiper
       className="relative"
+      onSlideChange={() => setJustForTriggeringRender({})}
     >
       {
           imgUrls.map((imgUrl, index) => {
@@ -45,8 +66,8 @@ const ProductImageHaul = ({imgUrls = []}) => {
           })
         }
       
-      <Button direction="prev" />
-      <Button direction="next"/>
+      <Button direction="prev" setJustForTriggeringRender={setJustForTriggeringRender} />
+      <Button direction="next" setJustForTriggeringRender={setJustForTriggeringRender} />
     </Swiper>
   )
 }
@@ -91,7 +112,8 @@ const ProductDetail = ({productInfo = {}}) => {
 export default ProductDetail;
 
 Button.propTypes = {
-  direction: PropTypes.oneOf(['next', 'prev'])
+  direction: PropTypes.oneOf(['next', 'prev']),
+  setJustForTriggeringRender: PropTypes.func
 }
 
 ProductImageHaul.propTypes = {
