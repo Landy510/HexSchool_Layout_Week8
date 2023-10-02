@@ -85,7 +85,7 @@ const Header = () => {
               <img 
                 src={pointScanImg} 
                 alt="" 
-                className='mr-[4px]'
+                className='mr-[4px] object-contain'
               />
               訂閱
             </a>
