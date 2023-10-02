@@ -1,9 +1,16 @@
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 const Modal = ({
   show,
   onClose,
   children
 }) => {
+
+  useEffect(() => {
+     document.body.classList.toggle('overflow-y-hidden', show);
+
+     return () => document.body.classList.remove('overflow-y-hidden');
+  }, [show])
 
   if(!show) return null;
 
@@ -13,7 +20,7 @@ const Modal = ({
         className="fixed top-[0] bottom-[0] left-[0] right-[0] bg-slate-900/25 backdrop-blur transition-opacity opacity-100"
         onClick={() => onClose(false)}
       ></div>
-      <div className='relative max-w-lg w-full p-3 bg-white mx-5 mt-8'>
+      <div className='relative max-w-lg w-full p-3 bg-white mx-5 my-8'>
         <button 
           type='button'
           className='material-symbols-outlined absolute right-[-1.25rem] top-[-1.25rem] block w-[2.5rem] h-[2.5rem] bg-white rounded-full z-[1]'
@@ -34,5 +41,6 @@ export default Modal;
 
 Modal.propTypes = {
   show: PropTypes.bool,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  children: PropTypes.node
 }
