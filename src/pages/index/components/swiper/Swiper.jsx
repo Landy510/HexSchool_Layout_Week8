@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
-import Swiper from 'swiper';
+// import Swiper from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Scrollbar } from 'swiper/modules';
 
 const DisplayCard = ({index}) => {
   return (
@@ -24,38 +26,68 @@ const DisplayCard = ({index}) => {
   )
 }
 
-const CustomizedSwiper = () => {
-  const swiperRef = useRef(null);
+// const CustomizedSwiper = () => {
+//   const swiperRef = useRef(null);
 
-  useEffect(() => {
-    swiperRef.current = new Swiper('.mySwiper' , {
-      slidesPerView: 3,
-      spaceBetween: 24,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-        hide: false
-      },
-    })
-  }, [])
+//   useEffect(() => {
+//     swiperRef.current = new Swiper('.mySwiper' , {
+//       slidesPerView: 3,
+//       spaceBetween: 24,
+//       scrollbar: {
+//         el: '.swiper-scrollbar',
+//         draggable: true,
+//         hide: false
+//       },
+//     })
+//   }, [])
+
+//   return (
+//     <div className="swiper mySwiper !overflow-visible" ref={swiperRef}>
+//       <div className="swiper-wrapper">
+//         {
+//           Array.from({length: 4}).map((val, index) => {
+//             return (
+//               <div key={index} className="swiper-slide max-w-[416px] !w-full">
+//                 <DisplayCard index={index} />
+//               </div>
+//             )
+//           })
+//         }
+//       </div>
+//       <div className="swiper-scrollbar">
+//         <p className='font-bold absolute top-1/2 -right-[4rem] -translate-y-1/2'>Scroll</p>
+//       </div>
+//     </div>
+//   )
+// }
+
+const CustomizedSwiper = () => {
 
   return (
-    <div className="swiper mySwiper !overflow-visible" ref={swiperRef}>
-      <div className="swiper-wrapper">
+    <>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={24}
+        scrollbar={{
+          hide: true,
+        }}
+        modules={[Scrollbar]}
+        className="mySwiper"
+      >
+        
         {
           Array.from({length: 4}).map((val, index) => {
             return (
-              <div key={index} className="swiper-slide max-w-[416px] !w-full">
-                <DisplayCard index={index} />
-              </div>
+              <SwiperSlide key={index}>
+                <div className="max-w-[416px]">
+                  <DisplayCard index={index} />
+                </div>
+              </SwiperSlide>
             )
           })
         }
-      </div>
-      <div className="swiper-scrollbar">
-        <p className='font-bold absolute top-1/2 -right-[4rem] -translate-y-1/2'>Scroll</p>
-      </div>
-    </div>
+      </Swiper>
+    </>
   )
 }
 
