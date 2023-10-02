@@ -1,8 +1,14 @@
-// @import 'swiper/css/bundle';
 @import 'swiper/css';
 @import 'swiper/css/scrollbar';
 
+.mySwiper {
+  overflow-x: visible
+}
 
-.swiper-horizontal > .swiper-scrollbar {
-  @apply mt-9 relative bg-[#ffffff]/[.2] max-w-[856px] left-[0px];
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  @apply mt-[0] relative bg-[#ffffff]/[.2] max-w-[856px] left-[0px];
+}
+
+.swiper-scrollbar-drag {
+  @apply bg-[#ffffff];
 }

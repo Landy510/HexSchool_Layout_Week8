@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-// import Swiper from 'swiper';
+import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar } from 'swiper/modules';
 
@@ -26,41 +25,6 @@ const DisplayCard = ({index}) => {
   )
 }
 
-// const CustomizedSwiper = () => {
-//   const swiperRef = useRef(null);
-
-//   useEffect(() => {
-//     swiperRef.current = new Swiper('.mySwiper' , {
-//       slidesPerView: 3,
-//       spaceBetween: 24,
-//       scrollbar: {
-//         el: '.swiper-scrollbar',
-//         draggable: true,
-//         hide: false
-//       },
-//     })
-//   }, [])
-
-//   return (
-//     <div className="swiper mySwiper !overflow-visible" ref={swiperRef}>
-//       <div className="swiper-wrapper">
-//         {
-//           Array.from({length: 4}).map((val, index) => {
-//             return (
-//               <div key={index} className="swiper-slide max-w-[416px] !w-full">
-//                 <DisplayCard index={index} />
-//               </div>
-//             )
-//           })
-//         }
-//       </div>
-//       <div className="swiper-scrollbar">
-//         <p className='font-bold absolute top-1/2 -right-[4rem] -translate-y-1/2'>Scroll</p>
-//       </div>
-//     </div>
-//   )
-// }
-
 const CustomizedSwiper = () => {
 
   return (
@@ -69,7 +33,8 @@ const CustomizedSwiper = () => {
         slidesPerView={3}
         spaceBetween={24}
         scrollbar={{
-          hide: true,
+          hide: false,
+          el: '.swiper-scrollbar',
         }}
         modules={[Scrollbar]}
         className="mySwiper"
@@ -86,9 +51,18 @@ const CustomizedSwiper = () => {
             )
           })
         }
+        <div className='flex items-center mt-9'>
+          <div className="swiper-scrollbar" />
+          <p className='text-white font-bold ml-5'>SCROLL</p>
+        </div>
+        
       </Swiper>
     </>
   )
 }
 
 export default CustomizedSwiper
+
+DisplayCard.propTypes = {
+  index: PropTypes.number
+}
