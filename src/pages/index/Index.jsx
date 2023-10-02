@@ -4,6 +4,7 @@ import carouselImg from '@/assets/images/carousel.png';
 import line_end_arrow_defaultImg from '@/assets/images/line_end_arrow_default.png';
 import line_start_arrow_hoverImg from '@/assets/images/line_start_arrow_hover.png';
 import line_end_arrow_notchImg from '@/assets/images/line_end_arrow_notch.png';
+import long_line_end_arrow_notchImg from '@/assets/images/long_line_end_arrow_notch.png';
 import carousel_mobileImg from '@/assets/images/carousel_mobile.png';
 import emergencyImg from '@/assets/images/emergency.png';
 import seeMoreImg from '@/assets/images/see-more.png';
@@ -57,7 +58,7 @@ const DisplayAICard = ({index, name, type, detail, bgImgUrl}) => {
         <p className='flex flex-wrap tablet:flex-nowrap justify-between'>
           <span className='mr-2-1/2'>{detail}</span>
           <img 
-            src={line_end_arrow_notchImg} 
+            src={long_line_end_arrow_notchImg} 
             alt="" 
             className='object-contain w-full max-w-[155px] mt-2-1/2 tablet:mt-0'
           />
@@ -81,7 +82,7 @@ const Index = () => {
               <img 
                 src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/circle.png?raw=true" 
                 alt="" 
-                className='w-[196px] h-[196px] mx-auto'
+                className='w-[196px] h-[196px] mx-auto spin_animation'
               />
             </div>
             <div className="col-span-3 flex flex-col">
@@ -96,7 +97,7 @@ const Index = () => {
               <img 
                 src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/diane.png?raw=true" 
                 alt="" 
-                className='mt-auto'
+                className='mt-auto shadow-[#8F00FFCC]/[.8] shadow-[0_0_1rem_0.5rem]'
               />
             </div>
             <div className="col-span-6">
@@ -168,7 +169,7 @@ const Index = () => {
         <img 
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/circle.png?raw=true" 
           alt="" 
-          className='w-[196px] h-[196px] mx-auto mb-6'
+          className='w-[196px] h-[196px] mx-auto mb-6 spin_animation'
         />
         <h2 className='shrikhand fs-20 flex justify-between text-white'>
           {
@@ -244,14 +245,14 @@ const Index = () => {
               <p className='flex items-center justify-between'>
                 榮幸地宣布，ALPHABOX+ 已成功完成最新一代的升級！本次升級包括提升投影解析度、優化語音辨識技術，以及擴充情感識別功能。
                 <img 
-                  src={line_end_arrow_notchImg} 
+                  src={long_line_end_arrow_notchImg} 
                   alt="" 
                   className='w-[192px] h-[24px] object-contain hidden tablet:block'
                 />
               </p>
               <p>歡迎您了解本次升級帶來的更為卓越的性能！</p>
               <img 
-                src={line_end_arrow_notchImg} 
+                src={long_line_end_arrow_notchImg} 
                 alt="" 
                 className='w-[192px] h-[24px] mt-2-1/2 object-contain block tablet:hidden'
               />

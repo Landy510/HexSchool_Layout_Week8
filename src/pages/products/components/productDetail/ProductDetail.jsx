@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import line_end_arrow_notchImg from '@/assets/images/line_end_arrow_notch.png';
+import long_line_end_arrow_notchImg from '@/assets/images/long_line_end_arrow_notch.png';
 import Group_1Img from '@/assets/images/Group_1.png';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { useState } from 'react';
@@ -87,9 +88,14 @@ const ProductDetail = ({productInfo = {}}) => {
           <p className="font-bold">知識型</p>
           <p className="mb-3">學術領導/知識分享/智能問答</p>
           <img 
+            src={long_line_end_arrow_notchImg} 
+            alt="" 
+            className='hidden tablet:inline-block desktop:inline-block max-w-[305px]'
+          />
+          <img 
             src={line_end_arrow_notchImg} 
             alt="" 
-            className='max-w-[305px]'
+            className='max-w-[90px] inline-block tablet:hidden desktop:hidden'
           />
         </div>
         <div className='w-full block desktop:hidden mt-3'>

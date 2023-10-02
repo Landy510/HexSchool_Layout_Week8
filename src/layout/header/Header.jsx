@@ -14,6 +14,7 @@ const Header = () => {
         <Link  
           to={'/'}
           className="shrikhand fs-32 text-white"
+          onClick={() => setIsDropDownShow(false)}
         >
           ALPHABOX+
         </Link>
@@ -99,10 +100,13 @@ const Header = () => {
             menu
           </button>
         </div>
-        <ul className={[
-          'top-[100%] left-[0px] right-[0px] bg-gradient-to-b from-primary-300 to-primary-500 text-white font-medium pt-[24px] pb-[32px] mt-[1px] z-10',
-          isDropDownShow ? 'absolute' : 'hidden'
-        ].join(' ')}>
+        <ul 
+          className={[
+            'top-[100%] left-[0px] right-[0px] bg-gradient-to-b from-primary-300 to-primary-500 text-white font-medium pt-[24px] pb-[32px] mt-[1px] z-10',
+            isDropDownShow ? 'absolute' : 'hidden'
+          ].join(' ')}
+          onClick={() => setIsDropDownShow(false)}
+        >
           <li>
             <Link  
               to={'/products/Diane'}

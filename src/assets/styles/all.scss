@@ -3,19 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@300&display=swap');
 
 // variables
-// @import 'bootstrap/scss/functions';
 @import './variables/variables';
-// @import 'bootstrap/scss/mixins';
 
 // utils
 @import './utils/fontStyle';
+@import './utils/spinAnimation';
 
 // base
 @import './base/reset';
 @import './base/base';
 
 // vendors
-// @import './vendors/bootstrap';
 @import './vendors/tailwindCSS';
 @import './vendors/customized_swiper';
 @import 'aos/dist/aos.css';
