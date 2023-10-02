@@ -13,8 +13,7 @@ const Pagination = ({
       {
         Array.from({length: pages}).map((_, index) => {
           return <li key={index}>
-          <a 
-            href="#"
+          <button 
             className={[
               "saira-extra-condensed text-[1.5rem] text-white mr-6 border-b-[1px] border-solid hover:border-white",
               index === activePageIndex ? 'border-white' : 'border-transparent'
@@ -24,7 +23,7 @@ const Pagination = ({
             }}
           >
             {index+1}
-          </a>
+          </button>
         </li>
         })
       }
