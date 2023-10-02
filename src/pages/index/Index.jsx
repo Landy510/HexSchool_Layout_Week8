@@ -3,7 +3,6 @@ import styles from './index.module.scss';
 import carouselImg from '@/assets/images/carousel.png';
 import line_end_arrow_defaultImg from '@/assets/images/line_end_arrow_default.png';
 import line_start_arrow_hoverImg from '@/assets/images/line_start_arrow_hover.png';
-import line_end_arrow_notchImg from '@/assets/images/line_end_arrow_notch.png';
 import long_line_end_arrow_notchImg from '@/assets/images/long_line_end_arrow_notch.png';
 import carousel_mobileImg from '@/assets/images/carousel_mobile.png';
 import emergencyImg from '@/assets/images/emergency.png';
@@ -100,7 +99,7 @@ const Index = () => {
                 className='mt-auto shadow-[#8F00FFCC]/[.8] shadow-[0_0_1rem_0.5rem]'
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 flex flex-col">
               <h2 className='shrikhand fs-32 flex justify-between text-white'>
                 {
                   'ALPHABOX+'.split('').map((letter, index) => {
@@ -109,11 +108,11 @@ const Index = () => {
                 }
               </h2>
               <p className='text-center text-white font-bold tracking-[1.5rem] mb-5'>擁抱未來科技，專屬您的3D立體投影陪伴機器人</p>
-              <div className="grid grid-cols-12 gap-6">
-                <div className="col-span-6">
+              <div className="grid grid-cols-12 gap-6 grow">
+                <div className="col-span-6 flex">
                   <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/felix.png?raw=true" alt="" />
                 </div>
-                <div className="col-span-6">
+                <div className="col-span-6 flex">
                   <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/karina.png?raw=true" alt="" />
                 </div>
               </div>

@@ -22,7 +22,7 @@ const Header = () => {
           <li>
             <Link  
               to={'/products/Diane'}
-              className='px-[20px]'
+              className='px-[20px] block'
             >
               產品
             </Link>
@@ -30,7 +30,7 @@ const Header = () => {
           <li>
             <Link  
               to={'/aboutUs'}
-              className='px-[20px]'
+              className='px-[20px] block'
             >
               關於我們
             </Link>
@@ -38,7 +38,7 @@ const Header = () => {
           <li>
             <Link  
               to={'/news'}
-              className='px-[20px]'
+              className='px-[20px] block'
             >
               最新消息
             </Link>
@@ -46,7 +46,7 @@ const Header = () => {
           <li>
             <Link  
               to={'/FAQ'}
-              className='px-[20px]'
+              className='px-[20px] block'
             >
               FAQ
             </Link>
@@ -54,7 +54,7 @@ const Header = () => {
           <li>
             <Link  
               to={'/contactUs'}
-              className='px-[20px]'
+              className='px-[20px] block'
             >
               聯絡我們
             </Link>
@@ -64,7 +64,7 @@ const Header = () => {
           <li>
             <Link 
               to={'/user/register'}
-              className='px-[12px]'
+              className='px-[12px] block'
             >
               註冊
             </Link>
@@ -72,7 +72,7 @@ const Header = () => {
           <li>
             <Link 
               to={'/user/login'}
-              className='px-[12px]'
+              className='px-[12px] block'
             >
               登入
             </Link>
