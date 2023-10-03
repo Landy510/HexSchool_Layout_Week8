@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './index.module.scss';
 import carouselImg from '@/assets/images/carousel.png';
+import carousel_1Img from '@/assets/images/carousel_1.jpg';
 import line_end_arrow_defaultImg from '@/assets/images/line_end_arrow_default.png';
 import line_start_arrow_hoverImg from '@/assets/images/line_start_arrow_hover.png';
 import long_line_end_arrow_notchImg from '@/assets/images/long_line_end_arrow_notch.png';
@@ -11,6 +12,7 @@ import seeMoreImg from '@/assets/images/see-more.png';
 import point_scanImg from '@/assets/images/point_scan.png';
 import ALPHABOXTextImg from '@/assets/images/ALPHABOX+.png';
 import Swiper from './components/swiper/Swiper';
+import IntroductionSwiper from './components/introductionSwiper/IntroductionSwiper';
 
 const AIInfo = [
   {
@@ -145,34 +147,7 @@ const Index = () => {
           <p className='mb-3'>ALPHABOX+</p>
         </div>
         <div className="bg-white h-[1px]"></div>
-        <div className='flex items-center justify-center py-6 px-5 desktop:px-15'>
-          <div>
-            <img 
-              src={line_start_arrow_hoverImg} 
-              alt="" 
-              className='w-full max-w-[180px]'
-            />
-          </div>
-          <div className='mx-[52px] relative'>
-            <div className='absolute top-1/2 right-[0px] -translate-y-1/2 text-right pr-8'>
-              <p className='shrikhand text-[4rem] desktop:text-[6rem] text-white tracking-normal'>01</p>
-              <p className='text-white text-[1.5rem] tracking-[1.5rem] desktop:text-[2rem] desktop:tracking-[2rem] -mr-[1.5rem] desktop:-mr-6 mb-3'>立體投影技術</p>
-              <p className='text-white text-[1rem] tracking-normal'>透過高科技立體投影技術，讓您感受真實的科技世界。</p>
-            </div>
-            <img 
-              src={carouselImg} 
-              alt="" 
-              className='max-w-[1296px] w-full'
-            />
-          </div>
-          <div>
-            <img 
-              src={line_end_arrow_defaultImg} 
-              alt="" 
-              className='w-full max-w-[180px]'
-            />
-          </div>
-        </div>
+        <IntroductionSwiper />
         <div className='bg-gradient-to-r from-primary-500 to-primary-300 h-[40px] mx-5 desktop:mx-15'></div>
       </div>
       {/* --- END  --- */}
@@ -224,20 +199,7 @@ const Index = () => {
           </p>
         </div>
         <div className="bg-white h-[1px]"></div>
-        <div className='flex items-center justify-center pt-3 pb-6 px-2-1/2'>
-          <div className='relative'>
-            <div className='text-white absolute bottom-[0] p-3'>
-              <p className='shrikhand fs-64'>01</p>
-              <p className='fs-24 mb-2'>立體投影技術</p>
-              <p className='fs-16'>透過高科技立體投影技術，讓您感受真實的科技世界。</p>
-            </div>
-            <img 
-              src={carousel_mobileImg} 
-              alt="" 
-              className='w-full'
-            />
-          </div>
-        </div>
+        <IntroductionSwiper />
         <div className='bg-gradient-to-r from-primary-500 to-primary-300 h-[40px] mx-2-1/2'></div>
       </div>
       {/* --- END  --- */}
