@@ -153,7 +153,12 @@ const Index = () => {
               className='w-full max-w-[180px]'
             />
           </div>
-          <div className='mx-[52px]'>
+          <div className='mx-[52px] relative'>
+            <div className='absolute top-1/2 right-[0px] -translate-y-1/2 text-right pr-8'>
+              <p className='shrikhand text-[4rem] desktop:text-[6rem] text-white tracking-normal'>01</p>
+              <p className='text-white text-[1.5rem] tracking-[1.5rem] desktop:text-[2rem] desktop:tracking-[2rem] -mr-[1.5rem] desktop:-mr-6 mb-3'>立體投影技術</p>
+              <p className='text-white text-[1rem] tracking-normal'>透過高科技立體投影技術，讓您感受真實的科技世界。</p>
+            </div>
             <img 
               src={carouselImg} 
               alt="" 
@@ -224,7 +229,7 @@ const Index = () => {
             <div className='text-white absolute bottom-[0] p-3'>
               <p className='shrikhand fs-64'>01</p>
               <p className='fs-24 mb-2'>立體投影技術</p>
-              <p>透過高科技立體投影技術，讓您感受真實的科技世界。</p>
+              <p className='fs-16'>透過高科技立體投影技術，讓您感受真實的科技世界。</p>
             </div>
             <img 
               src={carousel_mobileImg} 
