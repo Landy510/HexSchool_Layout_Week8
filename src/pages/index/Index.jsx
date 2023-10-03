@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './index.module.scss';
 import carouselImg from '@/assets/images/carousel.png';
@@ -40,7 +41,7 @@ const AIInfo = [
 
 const DisplayAICard = ({index, name, type, detail, bgImgUrl}) => {
   return (
-    <a 
+    <Link 
       className={[
         styles['displayAIcard'],
         'text-white text-center w-1/2 px-2-1/2 py-5',
@@ -49,6 +50,7 @@ const DisplayAICard = ({index, name, type, detail, bgImgUrl}) => {
       style={{
         backgroundImage: `url(${bgImgUrl})`
       }}
+      to={`/products/${name}`}
     >
       <span className='fs-128 tablet:text-[25rem] saira-extra-condensed'>{index}</span>
       <p className='shrikhand fs-32 mb-15'>{name}</p>
@@ -63,7 +65,7 @@ const DisplayAICard = ({index, name, type, detail, bgImgUrl}) => {
           />
         </p>
       </div>
-    </a>
+    </Link>
   )
 }
 
@@ -96,7 +98,7 @@ const Index = () => {
               <img 
                 src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/diane.png?raw=true" 
                 alt="" 
-                className='mt-auto shadow-[#8F00FFCC]/[.8] shadow-[0_0_1rem_0.5rem]'
+                className='mt-auto hover:shadow-[#8F00FFCC]/[.8] hover:shadow-[0_0_1rem_0.5rem] hover:-translate-y-[1rem] duration-500'
               />
             </div>
             <div className="col-span-6 flex flex-col">
@@ -110,10 +112,18 @@ const Index = () => {
               <p className='text-center text-white font-bold tracking-[1.5rem] mb-5'>擁抱未來科技，專屬您的3D立體投影陪伴機器人</p>
               <div className="grid grid-cols-12 gap-6 grow">
                 <div className="col-span-6 flex">
-                  <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/felix.png?raw=true" alt="" />
+                  <img 
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/felix.png?raw=true" 
+                    alt="" 
+                    className='mt-auto hover:shadow-[#8F00FFCC]/[.8] hover:shadow-[0_0_1rem_0.5rem] hover:-translate-y-[1rem] duration-500'
+                  />
                 </div>
                 <div className="col-span-6 flex">
-                  <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/karina.png?raw=true" alt="" />
+                  <img 
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/karina.png?raw=true" 
+                    alt="" 
+                    className='mt-auto hover:shadow-[#8F00FFCC]/[.8] hover:shadow-[0_0_1rem_0.5rem] hover:-translate-y-[1rem] duration-500'
+                  />
                 </div>
               </div>
             </div>
@@ -121,7 +131,7 @@ const Index = () => {
               <img 
                   src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/vito.png?raw=true" 
                   alt="" 
-                  className='mt-auto'
+                  className='mt-auto hover:shadow-[#8F00FFCC]/[.8] hover:shadow-[0_0_1rem_0.5rem] hover:-translate-y-[1rem] duration-500'
                 />
             </div>
           </div>

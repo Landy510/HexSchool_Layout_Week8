@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar } from 'swiper/modules';
+import { Scrollbar, Mousewheel } from 'swiper/modules';
 
 const DisplayCard = ({index}) => {
   return (
@@ -36,7 +36,8 @@ const CustomizedSwiper = () => {
           hide: false,
           el: '.swiper-scrollbar',
         }}
-        modules={[Scrollbar]}
+        mousewheel={true}
+        modules={[Scrollbar, Mousewheel]}
         className="mySwiper"
       >
         
