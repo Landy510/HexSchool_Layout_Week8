@@ -26,8 +26,9 @@ const IntroductionSwiper = () => {
   return (
     <>
       <div className="flex items-center px-5 pt-3 pb-6 desktop:px-15 tablet:py-6 desktop:py-6">
-        <button
-          className='swiper-button-prev max-w-[180px] w-full hidden tablet:inline-block desktop:inline-block'
+        <div
+          className='swiper-button-prev max-w-[180px] w-full hidden tablet:block desktop:block'
+          role='button'
           onClick={() => setJustForTriggerRendering({})}
         >
           {
@@ -43,9 +44,9 @@ const IntroductionSwiper = () => {
               className='rotate-180'
             />
           }
-        </button>
+        </div>
         <Swiper
-            className="relative grow !mx-0 tablet:!mx-[3.25rem] desktop:!mx-[3.25rem]"
+            className="relative grow w-[1px] !mx-0 tablet:!mx-[3.25rem] desktop:!mx-[3.25rem]"
             modules={[Navigation]}
             navigation= {{
               nextEl: '.swiper-button-next',
@@ -69,13 +70,13 @@ const IntroductionSwiper = () => {
                       </div>
                     </div>
                   </SwiperSlide>
-                )
-              })
+                )})
             }
         </Swiper>
-        <button 
+        <div 
           className='swiper-button-next max-w-[180px] w-full hidden tablet:inline-block desktop:inline-block'
           onClick={() => setJustForTriggerRendering({})}
+          role='button'
         >
           {
             (swiperRef && swiperRef.slides) && swiperRef.activeIndex === swiperRef.slides.length -1 ?
@@ -91,7 +92,7 @@ const IntroductionSwiper = () => {
             />
           }
           
-        </button>
+        </div>
       </div>
       
     </>
