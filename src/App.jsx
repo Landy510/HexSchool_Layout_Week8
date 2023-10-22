@@ -4,6 +4,7 @@ import { HashRouter } from 'react-router-dom';
 import './App.scss';
 import Header from '@/layout/header/Header';
 import Footer from '@/layout/footer/Footer';
+import ScrollToTop from '@/components/scrollToTop/ScrollToTop';
 
 // Individual Route | START
 import Index from '@/pages/index/Index.jsx';
@@ -23,6 +24,7 @@ function App() {
   return (
     <HashRouter>
       <Header />
+      <ScrollToTop />
       <main>
         <Suspense fallback={<h1>Loading...</h1>}>
           <Routes>
