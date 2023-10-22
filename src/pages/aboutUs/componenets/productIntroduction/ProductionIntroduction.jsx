@@ -4,7 +4,7 @@ import boxImg from '@/assets/images/box.png';
 import meetingImg from '@/assets/images/meeting.png';
 import point_scanInBlackImg from '@/assets/images/point_scanInBlack.png';
 
-const ProductIntroduction = () => {
+export default function ProductIntroduction() {
   return (
     <>
       <div className="px-2-1/2 tablet:px-15 desktop:px-15 pt-3 tablet:pt-8 desktop:pt-8">
@@ -83,4 +83,4 @@ const ProductIntroduction = () => {
   )
 }
 
-export default ProductIntroduction;
+// export default ProductIntroduction;

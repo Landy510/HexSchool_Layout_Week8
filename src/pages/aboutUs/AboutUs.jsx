@@ -2,7 +2,7 @@ import Introduction from './componenets/introduction/Introduction';
 import ProductionIntroduction from './componenets/productIntroduction/ProductionIntroduction';
 
 
-const AboutUs = () => {
+export default function AboutUs () {
   return (
     <div>
       <Introduction />
@@ -11,4 +11,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs;
+// export default AboutUs;

@@ -3,7 +3,7 @@ import about_usImg from '@/assets/images/about_us.png';
 import about_us_mobileImg from '@/assets/images/about_us_mobile.png';
 import emergencyImg from '@/assets/images/emergency.png';
 
-const Introduction = () => {
+export default function Introduction () {
   return (
     <div className={[
       styles['container-bg'],
@@ -47,4 +47,4 @@ const Introduction = () => {
   )
 }
 
-export default Introduction;
+// export default Introduction;
