@@ -1,4 +1,5 @@
 import emergencyInBlackImg from '@/assets/images/emergencyInBlack.png';
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <div className={[
@@ -19,40 +20,48 @@ const Footer = () => {
       </div>
       <ul className='flex flex-col tablet:flex-row'>
         <li>
-          <a 
-            href="#"
+          <Link
             className={[
               'py-2 block',
               'tablet:px-2-1/2'
             ].join(' ')}
-          >關於我們</a>
+            to='aboutUs'
+          >
+            關於我們
+          </Link>
         </li>
         <li>
-          <a 
-            href="#"
+          <Link
             className={[
               'py-2 block',
               'tablet:px-2-1/2'
             ].join(' ')}
-          >產品資訊</a>
+            to='products/Diane'
+          >
+            產品資訊
+          </Link>
         </li>
         <li>
-          <a 
-            href="#"
+          <Link
             className={[
               'py-2 block',
               'tablet:px-2-1/2'
             ].join(' ')}
-          >常見問題</a>
+            to='FAQ'
+          >
+            常見問題
+          </Link>
         </li>
         <li>
-          <a 
-            href="#"
+          <Link
             className={[
               'py-2 block',
               'tablet:px-2-1/2'
             ].join(' ')}
-          >隱私政策</a>
+            to='/news'
+          >
+            最新消息
+          </Link>
         </li>
       </ul>
       <p className='block tablet:hidden w-full'>Copyright © 2023 Hexschool.</p>
