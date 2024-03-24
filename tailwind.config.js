@@ -3,9 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    './src/**/**/*.{html,jsx,tsx}',
-    './src/**/**/**/*.{html,jsx,tsx}',
-    './src/**/**/**/**/*.{html,jsx,tsx}',
+    './src/**/*.{html,jsx,tsx}'
   ],
   theme: {
     container: {
